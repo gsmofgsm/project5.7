@@ -3,7 +3,11 @@
 @section('content')
     <h1 class="title">Edit project</h1>
 
-    <form action="">
+    <form action="/projects/{{ $project->id }}" method="POST">
+
+        @method('PATCH')
+
+        @csrf()
 
         <div class="field">
 
