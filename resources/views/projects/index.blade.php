@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+@extends('layout')
+
+@section('content')
 <h1>Projects</h1>
 
 <ul>
@@ -16,5 +13,4 @@
 @endforeach
 </ul>
 
-</body>
-</html>
+@endsection
