@@ -9,13 +9,13 @@
 
     <div class="field">
         <div class="control">
-            <input type="text" name="title" placeholder="Project title">
+            <input type="text" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" name="title" placeholder="Project title">
         </div>
     </div>
 
     <div class="field">
         <div class="control">
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="Project description"></textarea>
+            <textarea name="description" class="input {{ $errors->has('description') ? 'is-danger' : '' }}" id="description" cols="30" rows="10" placeholder="Project description"></textarea>
         </div>
     </div>
 
