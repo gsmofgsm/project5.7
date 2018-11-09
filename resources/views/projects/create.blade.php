@@ -20,22 +20,17 @@
     </div>
 
     <div class="field">
+
         <div class="control">
-            <button type="submit">Create Project</button>
+
+            <button type="submit" class="button is-link" id="" name="">Create Project</button>
+
         </div>
+
     </div>
 
-    @if($errors->any())
 
-    <div class="notification is-danger">
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-
-    @endif
+    @include('errors')
 </form>
 
 @endsection

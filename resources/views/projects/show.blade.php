@@ -32,11 +32,6 @@
 
         </div>
 
-        @foreach($errors->all() as $error)
-            {{ $error }}
-
-            @endforeach
-
     @endif
 
     {{-- add a new task form --}}
@@ -67,5 +62,7 @@
         </div>
 
     </form>
+
+    @include('errors')
 
 @endsection
