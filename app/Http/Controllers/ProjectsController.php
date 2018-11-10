@@ -14,7 +14,11 @@ class ProjectsController extends Controller
 
     public function index()
     {
-        $projects = Project::where('owner_id', auth()->id())->get();
+        if(auth()->user()->isAdmin()){
+            $projects = Project::all();
+        }else {
+            $projects = Project::where('owner_id', auth()->id())->get();
+        }
         return view('projects.index', compact('projects'));
     }
 
