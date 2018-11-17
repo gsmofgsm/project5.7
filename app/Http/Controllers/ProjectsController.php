@@ -18,7 +18,7 @@ class ProjectsController extends Controller
         if(auth()->user()->isAdmin()){
             $projects = Project::all();
         }else {
-            $projects = Project::where('owner_id', auth()->id())->get();
+            $projects = auth()->user()->projecs;
         }
         return view('projects.index', compact('projects'));
     }
