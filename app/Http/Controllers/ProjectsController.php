@@ -34,9 +34,7 @@ class ProjectsController extends Controller
 
         $attributes['owner_id'] = auth()->id();
 
-        $project = Project::create($attributes);
-
-        event(new ProjectCreated($project));
+        Project::create($attributes);
 
         return redirect('/projects');
     }
